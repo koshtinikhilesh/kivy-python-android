@@ -1,0 +1,14 @@
+<container>:
+    rows:10
+    display: display
+    BoxLayout:
+        orientation: "vertical"
+        AddButton:
+            on_release: root.add_one()
+
+        SubtractButton:
+            on_release: root.subtract_one()
+    Label:
+        id: display
+        font_size: dp(50)
+        text: '0'
