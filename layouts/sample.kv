@@ -1,0 +1,116 @@
+#: import CheckBox kivy.uix.checkbox
+
+
+
+
+<SampleBoxLayout>:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_x: .22
+
+
+
+        Label:
+            text: "are you above 18"
+            color: 0, 0, 0, 1
+
+        CheckBox:
+            on_active: root.check_status(self.active)
+            color: 0, 0, 0, 1
+
+    BoxLayout:
+        orientation: "horizontal"
+        size_hint_x: .55 
+        
+        Label:
+            text: "Favourite Color"
+            color: 0, 0, 0, 1
+            size_hint_x: .265
+
+        CheckBox:
+            group: "fav_color"
+            value: root.blue
+            size_hint_x: .05
+        Label:
+            text: "Blue"
+            color: 0, 0, 0, 1
+            
+            size_hint_x: .15
+
+
+        CheckBox:
+            value: root.red
+            group: "fav_color"
+            
+            size_hint_x: .05
+
+        Label:
+            text: "Red"
+            color: 0, 0, 0, 1
+            
+            size_hint_x: .15
+            
+
+        CheckBox:
+            value: root.green
+            group: "fav_color"
+
+            size_hint_x: .05
+
+        Label:
+            text: "Green"
+            color: 0, 0, 0, 1
+
+            size_hint_x: .15
+
+
+    BoxLayout:
+        orientation: "horizontal"
+        height: 30           
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_x: .25
+
+
+
+            Label:
+                text: str(slider_id.value)
+                color: 0, 0, 0, 1
+
+
+            Slider:
+                id: slider_id
+                min: -100
+                max: 100
+                step: 1
+                value: 0
+                on_value: root.OnSliderValueChange(self, slider_id.value)
+
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_x: .25
+
+            Label:
+                text: "ON/OFF"
+                color: 0, 0, 0, 1
+
+
+            Switch:
+                id: switch_id
+                on_active: root.switch_on(self, self.active)
+
+                                    
+
+    BoxLayout:
+        orientation: "horizontal"
+        Button:
+            text: "Hello"
+            size_hint: .5,.5
+        Button:
+            text: "Hello"
+          

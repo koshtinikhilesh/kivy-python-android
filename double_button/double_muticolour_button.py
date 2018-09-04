@@ -1,3 +1,12 @@
+# double_multicolor_button.py
+# THe python sctipt for displaying the two button 
+# in which the text colour changes simulatneously.
+#
+# Author:-- Koshti Nikhilesh
+
+
+
+
 from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
