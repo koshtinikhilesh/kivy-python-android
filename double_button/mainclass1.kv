@@ -1,0 +1,10 @@
+<ScatterWidget>:
+    TextInput:
+        id: mytextinput
+        font_size: 150
+        text: 'default'
+        on_text: root.change_color()
+    Label:
+        id: my_label
+        text: mytextinput.text
+        font_size: 150
